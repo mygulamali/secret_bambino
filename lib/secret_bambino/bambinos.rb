@@ -1,6 +1,6 @@
 module SecretBambino
   class Bambinos
-    def init(filename)
+    def initialize(filename)
       load_from_yaml(filename)
     end
 
