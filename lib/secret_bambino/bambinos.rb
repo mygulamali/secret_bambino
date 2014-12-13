@@ -1,13 +1,15 @@
 module SecretBambino
   class Bambinos
-    attr_reader :bambinos
-
     def initialize(filename)
       load_from_yaml(filename)
     end
 
     def assigned_bambinos
-      @assigned_bambinos ||= shuffle(bambinos)
+      @assigned_bambinos ||= shuffle(@bambinos)
+    end
+
+    def each_with_index(&block)
+      @bambinos.each_with_index &block
     end
 
     private
