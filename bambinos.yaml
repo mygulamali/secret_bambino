@@ -1,4 +1,7 @@
 bambinos:
-- a.bambino@new-bamboo.co.uk
-- foo@example.com
-- someone@somewhere.com
+- name: A Bambino
+  email: a.bambino@new-bamboo.co.uk
+- name: Foo Bar Baz Jr.
+  email: foo@example.com
+- name: So Meone
+  email: someone@somewhere.com
