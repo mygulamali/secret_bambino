@@ -16,5 +16,20 @@ module SecretBambino
         puts "Sent Secret Bambino assignment to #{bambino['name']} (#{bambino['email']})"
       end
     end
+
+    def test(email_address)
+      bambino = {
+        'name' => 'John Doe',
+        'email' => 'john.doe@example.com'
+      }
+      assigned_bambino = {
+        'name' => 'Jane Doe',
+        'email' => 'jane.doe@example.com'
+      }
+      renderer = SecretBambino::Renderer.new
+      message = renderer.render({bambino: bambino, assigned_bambino: assigned_bambino})
+      html_message = renderer.render({bambino: bambino, assigned_bambino: assigned_bambino}, true)
+      SecretBambino::Mail.send(email_address, 'This is a test', message, html_message)
+    end
   end
 end
