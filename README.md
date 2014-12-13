@@ -12,19 +12,15 @@ This is a little command line app to randomly assign participating Bambinos to S
 ```bash
 git clone https://github.com/mygulamali/secret_bambino.git
 ```
-
 2. Install the required gems:
 ```bash
 bundle install
 ```
-
 3. Copy the `.env.example` file to `.env` and populate with your settings.  You can test that your GMail SMTP server settings work correctly by executing the command:
 ```bash
 ./secret_bambino.exe test EMAIL_ADDRESS MESSAGE
 ```
-
 4. Create a YAML file containing the names and email addresses of participating Bambinos.  See the `bambinos.yaml` file as an example.
-
 5. Edit the `templates/message.html.erb` and the `templates/message.txt.erb` files to contain your HTML and plain text email messages, respectively, to participating Bambinos.
 
 ## Usage
