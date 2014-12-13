@@ -6,4 +6,9 @@ class Commands < Thor
   def test(email_address, message)
     SecretBambino::Mail.test(email_address, message)
   end
+
+  desc "assign BAMBINOS_YAML", "Assign and send assignments to Secret Bambinos in specified YAML file."
+  def assign(bambinos_yaml)
+    SecretBambino.assign(bambinos_yaml)
+  end
 end
