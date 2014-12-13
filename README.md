@@ -25,7 +25,10 @@ Copy the `.env.example` file to `.env` and populate with your settings.  You can
 
 Create a YAML file containing the names and email addresses of participating Bambinos.  See the `bambinos.yaml` file as an example.
 
-Edit the `templates/message.html.erb` and the `templates/message.txt.erb` files to contain your HTML and plain text email messages, respectively, to participating Bambinos.
+Edit the `templates/message.html.erb` and the `templates/message.txt.erb` files to contain your HTML and plain text email messages, respectively, to participating Bambinos.  You can test that the messages render and read correctly by executing the command:
+```bash
+./secret_bambino.exe test EMAIL_ADDRESS
+```
 
 ## Usage
 
